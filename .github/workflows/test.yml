@@ -22,8 +22,8 @@ jobs:
           | loader |
           loader := Metacello new.
           loader
-            baseline: 'YourProject';
-            repository: './src'.
+            baseline: 'ApprovalTests';
+            repository: 'src'.
           loader load.
         "
         ./pharo Pharo.image --headless save MyNewImage
