@@ -1,6 +1,7 @@
 name: on-push-do-doco
 on:
-  push:
+  workflow_dispatch:
+  # push:
 jobs:
   release:
     runs-on: windows-latest
