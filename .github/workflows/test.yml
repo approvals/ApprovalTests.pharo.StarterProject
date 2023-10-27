@@ -18,14 +18,15 @@ jobs:
 
     - name: Load code and create image
       run: |
-        ./pharo Pharo.image eval --save "
+        ./pharo Pharo.image --headless eval --save "
           | loader |
           loader := Metacello new.
           loader
             baseline: 'YourProject';
-            repository: 'filetree://$(pwd)/src'.
+            repository: './src'.
           loader load.
         "
+        ./pharo Pharo.image --headless save MyNewImage
         ./pharo Pharo.image save MyNewImage
 
     # Add additional steps to run tests or any other tasks
