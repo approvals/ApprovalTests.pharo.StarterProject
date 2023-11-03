@@ -19,6 +19,6 @@ jobs:
 
     - name: Load code and create image
       run: |
-        smalltalkci -s 'smalltalkci -s Squeak64-trunk'
+        smalltalkci -s 'smalltalkci -s Pharo64-11'
         shell: bash
         timeout-minutes: 15
