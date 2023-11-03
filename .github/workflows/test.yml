@@ -10,13 +10,15 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Setup Pharo
       uses: hpi-swa/setup-smalltalkCI@1.3.4
       with:
-        smalltalk-image: Pharo32-stable
+        smalltalk-image: Pharo64-11
 
     - name: Load code and create image
       run: |
-        smalltalkci -s 
+        smalltalkci -s ${{ matrix.smalltalk }}
+        shell: bash
+        timeout-minutes: 15
