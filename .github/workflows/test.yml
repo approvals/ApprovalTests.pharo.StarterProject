@@ -9,7 +9,8 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ ubuntu-latest ]
+        fail-fast: false
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
         smalltalk: [ Pharo64-11 ]
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.smalltalk }}
