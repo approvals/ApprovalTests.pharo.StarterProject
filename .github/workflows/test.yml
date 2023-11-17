@@ -8,8 +8,8 @@ on:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
-        fail-fast: false
         os: [ ubuntu-latest, windows-latest, macos-latest ]
         smalltalk: [ Pharo64-11 ]
     runs-on: ${{ matrix.os }}
