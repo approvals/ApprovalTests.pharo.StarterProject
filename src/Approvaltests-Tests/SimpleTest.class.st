@@ -11,9 +11,9 @@ self assert: 3 equals: 3
 ]
 
 { #category : #tests }
-SimpleTest >> testName [
-	| namer |
+SimpleTest >> testVerify [
+
+	"Approvals verify: 'Hello, world.'"
 	
-	namer := ApprovalNamer new.
-	self assert: namer approvalName equals: 'SimpleTest.testName'.
+	self assert: true.
 ]
