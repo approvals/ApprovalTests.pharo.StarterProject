@@ -19,10 +19,10 @@ ApprovalNamer >> approvalName [
 ApprovalNamer >> approvedFileName [
 	"	^self approvalName."
 
-	| name |
+	| name mainDirectory |
 	name := self approvalName.
-	
-	^ '/Users/dionstewart/Documents/Pharo/images/ApprovalTestsPharo 11.0 - 64bit/pharo-local/iceberg/approvals/ApprovalTests.pharo.StarterProject/src/Approvaltests-Tests/'
+	mainDirectory := FileLocator imageDirectory fullName  asString.
+	^ mainDirectory  , '/pharo-local/iceberg/approvals/ApprovalTests.pharo.StarterProject/src/Approvaltests-Tests/'
 	  , name , '.approved'
 ]
 
