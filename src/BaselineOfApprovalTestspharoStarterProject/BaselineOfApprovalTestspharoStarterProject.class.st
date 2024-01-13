@@ -12,5 +12,8 @@ BaselineOfApprovalTestspharoStarterProject >> baseline: spec [
 		spec package: 'Approvaltests'.
 		spec
 			package: 'Approvaltests-Tests'
-			with: [ spec requires: #( 'Approvaltests' ) ] ]
+			with: [ spec requires: #( 'Approvaltests' ) ] ].
+	spec
+		baseline: 'GitBridge'
+		with: [ spec repository: 'github://jecisc/GitBridge:v1.x.x/src' ]
 ]

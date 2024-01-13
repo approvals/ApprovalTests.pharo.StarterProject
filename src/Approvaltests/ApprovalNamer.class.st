@@ -17,13 +17,11 @@ ApprovalNamer >> approvalName [
 
 { #category : #'as yet unclassified' }
 ApprovalNamer >> approvedFileName [
-	"	^self approvalName."
 
-	| name mainDirectory |
+	| name sourceDirectory |
 	name := self approvalName.
-	mainDirectory := FileLocator imageDirectory fullName  asString.
-	^ mainDirectory  , '/pharo-local/iceberg/approvals/ApprovalTests.pharo.StarterProject/src/Approvaltests-Tests/'
-	  , name , '.approved'
+	sourceDirectory := ApprovalTestsBridge sourceDirectory resolve pathString.
+	^ sourceDirectory , '/Approvaltests-Tests/' , name , '.approved'
 ]
 
 { #category : #'as yet unclassified' }
